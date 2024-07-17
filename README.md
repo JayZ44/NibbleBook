@@ -2,18 +2,19 @@
 
 Getting Started
 
-To get started with the Strange Food API, follow these steps:
+To get started with the Strange Food API, follow these steps!:
 
     Clone the repository.
 
     Install dependencies:
-    
+
 
 
     Run the server
-<!-- 
 
-DATABASE SCHEMA 
+<!--
+
+DATABASE SCHEMA
 
 ID: INTERGET, PRIMARY KEY
 NAME: TEXT
@@ -23,4 +24,3 @@ RATING: INT (DEFAULT TO 0??)
 IS_VEGETARIAN: BOOLEAN (DEFAULT)
 DISCOVERED-DATE: DATE/TIMESTAMP
 COMMENTS: TEXT -->
-
