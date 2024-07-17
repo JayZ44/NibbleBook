@@ -1,4 +1,4 @@
-const checkSnackName = (req, res, next) => {
+const checkSnack = (req, res, next) => {
     // check the body to see if it has name
     if (req.body.name) {
         return next()
@@ -8,4 +8,4 @@ const checkSnackName = (req, res, next) => {
 }
 
 
-module.exports = { checkSnackName }
+module.exports = { checkSnack }

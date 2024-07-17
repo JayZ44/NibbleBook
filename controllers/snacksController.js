@@ -1,6 +1,5 @@
 const express = require("express");
 const snacks = express.Router();
-
 const {
   getAllSnacks,
   getOneSnack,
@@ -8,7 +7,7 @@ const {
   deleteSnack,
   updateSnack,
 } = require("../queries/snacks");
-const { checkName, checkArtist } = require("../validations/checkSnacks");
+const { checkSnack, checkArtist } = require("../validation/checkSnack");
 
 //INDEX
 snacks.get("/", async (req, res) => {
@@ -26,7 +25,7 @@ snacks.get("/:id", async (req, res) => {
   }
 });
 //CREATE
-snacks.post("/new", checkName, checkArtist, async (req, res) => {
+snacks.post("/new", checkSnack, checkArtist, async (req, res) => {
   const newSnack = await createSnack(req.body);
   res.json(newSnack);
 });
@@ -41,7 +40,7 @@ snacks.delete("/:id", async (req, res) => {
   }
 });
 //UPDATE
-snacks.put("/:id", checkName, checkArtist, async (req, res) => {
+snacks.put("/:id", checkSnack, checkArtist, async (req, res) => {
   const { id } = req.params;
   const updatedSnack = await updateSnack(id, req.body);
   if (updatedSnack.id) {
