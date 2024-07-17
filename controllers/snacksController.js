@@ -7,7 +7,7 @@ const {
   deleteSnack,
   updateSnack,
 } = require("../queries/snacks");
-const { checkSnack, checkArtist } = require("../validation/checkSnack");
+const { checkSnack } = require("../validation/checkSnack");
 
 //INDEX
 snacks.get("/", async (req, res) => {
@@ -25,7 +25,7 @@ snacks.get("/:id", async (req, res) => {
   }
 });
 //CREATE
-snacks.post("/new", checkSnack, checkArtist, async (req, res) => {
+snacks.post("/new", checkSnack, async (req, res) => {
   const newSnack = await createSnack(req.body);
   res.json(newSnack);
 });
@@ -40,7 +40,7 @@ snacks.delete("/:id", async (req, res) => {
   }
 });
 //UPDATE
-snacks.put("/:id", checkSnack, checkArtist, async (req, res) => {
+snacks.put("/:id", checkSnack, async (req, res) => {
   const { id } = req.params;
   const updatedSnack = await updateSnack(id, req.body);
   if (updatedSnack.id) {
