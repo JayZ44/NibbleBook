@@ -12,15 +12,4 @@ To get started with the Strange Food API, follow these steps!:
 
 - Initialize the database with "npm run db:init" and seed it with "npm run db:seed". The run "npm run start" to start up the server.
 
-<!--
 
-DATABASE SCHEMA
-
-ID: INTERGET, PRIMARY KEY
-NAME: TEXT
-ORIGIN: TEXT
-DESCRIPTION: TEXT
-RATING: INT (DEFAULT TO 0??)
-IS_VEGETARIAN: BOOLEAN (DEFAULT)
-DISCOVERED-DATE: DATE/TIMESTAMP
-COMMENTS: TEXT -->
