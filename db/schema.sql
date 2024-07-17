@@ -3,9 +3,9 @@
 
 CREATE TABLE snacks (
 id SERIAL PRIMARY KEY,
-name TEXT, 
+name TEXT NOT NULL, 
 origin TEXT,
-description TEXT,
+description TEXT NOT NULL,
 rating INT DEFAULT 0,
 is_vegetarian BOOLEAN DEFAULT FALSE,
 discovered_date DATE,
