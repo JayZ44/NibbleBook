@@ -19,7 +19,7 @@ To get started with the Strange Food API, follow these steps!:
 
 ```bash
 
-psql -h localhost -p 5432 -U postgres```
+psql -h localhost -p 5432 -U postgres;```
 
 
 2. Create the database:
@@ -32,7 +32,7 @@ psql -h localhost -p 5432 -U postgres```
 
 
 
-psql -h localhost -p 5432 -U postgres -d snacks_dev -f path/to/schema.sql
+psql -h localhost -p 5432 -U postgres -d snacks_dev -f path/to/schema.sql;
 
 
 4. Run the seed.sql file to populate the database with initial data:

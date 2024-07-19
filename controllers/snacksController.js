@@ -8,7 +8,7 @@ const {
   updateSnack,
 } = require("../queries/snacks");
 const { checkSnack } = require("../validation/checkSnack");
-console.log(snacks)
+// console.log(snacks)
 
 // INDEX
 snacks.get("/", async (req, res) => {

@@ -1,3 +1,7 @@
+DROP DATABASE IF EXISTS snacks_dev;
+
+CREATE DATABASE snacks_dev;
+
 \c snacks_dev
 
 

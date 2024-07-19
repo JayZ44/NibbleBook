@@ -29,6 +29,7 @@ const createSnack = async (snack) => {
         snack.rating || 0,
         snack.is_vegetarian || false,
         snack.discovered_date,
+        snack.comments
       ]
     );
     return newSnack;
